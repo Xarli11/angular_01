@@ -1,0 +1,17 @@
+<h2>Datos de compra</h2>
+Correo electrónico: <input type="text" [(ngModel)]="mail" placeholder="Escriba su correo electrónico"><br>
+Direccion: <input type="text" [(ngModel)]="direccion" placeholder="Escriba su direccion"><br>
+Teléfono: <input type="text" [(ngModel)]="telefono" placeholder="Escriba su telefono"><br>
+Comunidad:<select [(ngModel)]="comunidad">
+            <option value="madrid">Madrid</option>
+            <option value="cataluña">Cataluña</option>
+          </select><br>
+Forma de pago: <br>
+              Efectivo<input type="radio" name="pago" value="efectivo" [(ngModel)]="pago"><br>
+              Tarjeta<input type="radio" name="pago" value="tarjeta" [(ngModel)]="pago"><br>
+              Contra-reembolso<input type="radio" name="pago" value="contrareembolso" [(ngModel)]="pago"><br>
+<input type="checkbox" id="accept" [(ngModel)]="aceptado"><label for="accept">Acepta recibir informacion de nuestros productos</label><br>
+<button (click)="mostrar()">Enviar</button><br>
+<label>{{muestra}}</label>
+
+
