@@ -1,9 +1,9 @@
 <h1>Tu bicicleta:</h1>
-<input type="text" placeholder="Escriba el color:" [(ngModel)]="bicicleta.color"><br>
-<input type="text" placeholder="Escriba la marca:" [(ngModel)]="bicicleta.marca"><br>
-<input type="number" placeholder="Escriba la velocidad:" [(ngModel)]="bicicleta.velocidad"><br>
-<input type="number" placeholder="Escriba los piñones" [(ngModel)]="bicicleta.pinones"><br>
-<input type="number" placeholder="Escriba los platos:" [(ngModel)]="bicicleta.platos"><br>
+Color: <input type="text" placeholder="Escriba el color:" [(ngModel)]="bicicleta.color"><br>
+Marca<input type="text" placeholder="Escriba la marca:" [(ngModel)]="bicicleta.marca"><br>
+Velocidad: <input type="number" placeholder="Escriba la velocidad:" [(ngModel)]="bicicleta.velocidad"><br>
+Nº Piñones: <input type="number" placeholder="Escriba los piñones" [(ngModel)]="bicicleta.pinones"><br>
+Nº Platos: <input type="number" placeholder="Escriba los platos:" [(ngModel)]="bicicleta.platos"><br>
 <p>¿Eléctrica? <input type="checkbox" [(ngModel)]="bicicleta.electrica"></p>
 <button (click)="mostrar()">Mostrar</button>
 <p>Cambio de velocidad: <input type="number" [(ngModel)]="cambioVel"></p>
