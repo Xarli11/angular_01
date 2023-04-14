@@ -18,7 +18,7 @@ export class FormularioComponent implements OnInit  {
 
   }
   mostrar(){
-    this.muestra=this.mail+" "+this.direccion+" "+this.telefono+" "+this.comunidad+" "+this.pago+ " " +(this.aceptado?"aceptado":"no aceptado");
+    this.muestra="Mail: "+this.mail+" Dirección: "+this.direccion+" Teléfono: "+this.telefono+" Comunidad: "+this.comunidad+" Pago: "+this.pago + " Aceptado: "+(this.aceptado?"Sí":"No");
   }
 
 }

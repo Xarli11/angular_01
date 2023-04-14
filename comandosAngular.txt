@@ -1,3 +1,4 @@
 ng new NombreProyecto  -> Crear un proyecto con el nombre: NombreProyecto
 ng s  -> Para abrir el servidor
 ng s -o  ->Para abrir el servidor y abrir la pagina
+ng g c -> Crear un componente
