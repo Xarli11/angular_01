@@ -19,7 +19,6 @@ export class UnionComponent {
     this.mostrar();
     console.log(this.ejemploNumber);
     console.log(this.ejemploString);
-    console.log(meses[0]);
   }
 
   //Metodos
