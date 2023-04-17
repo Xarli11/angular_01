@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { UnionComponent } from './union/union.component';
 import { PacientePadreComponent } from './paciente-padre/paciente-padre.component';
 import { PacienteHijoComponent } from './paciente-hijo/paciente-hijo.component';
+import { MedicosHijoComponent } from './medicos-hijo/medicos-hijo.component';
+import { MedicosPadreComponent } from './medicos-padre/medicos-padre.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PacienteHijoComponent } from './paciente-hijo/paciente-hijo.component';
     ArraysComponent,
     UnionComponent,
     PacientePadreComponent,
-    PacienteHijoComponent
+    PacienteHijoComponent,
+    MedicosHijoComponent,
+    MedicosPadreComponent
   ],
   imports: [
     BrowserModule,

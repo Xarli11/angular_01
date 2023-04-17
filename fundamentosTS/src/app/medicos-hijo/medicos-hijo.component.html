@@ -1,0 +1,15 @@
+<h1>Hijos -> Lista</h1>
+<button (click)="sendMedico()">Enviar</button>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Cedula</th>
+  </tr>
+  <tr *ngFor="let m of listaMedicos">
+    <td>{{m.nombre}}</td>
+    <td>{{m.apellidos}}</td>
+    <td>{{m.cedula}}</td>
+    <td><img [src]="m.foto"></td>
+  </tr>
+</table>

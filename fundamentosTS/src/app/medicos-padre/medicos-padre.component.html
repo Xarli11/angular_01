@@ -1,0 +1,14 @@
+<h1>Padre (Medicos) -> Formulario</h1>
+<!-- Creamos un objeto del tipo medico en el TS del padre para poder pasarle los valores del formulario -->
+<p>Nombre: <input type="text" [(ngModel)]="m_empt.nombre"></p>
+<p>Apellidos: <input type="text" [(ngModel)]="m_empt.apellidos"></p>
+<p>Cédula: <input type="number" [(ngModel)]="m_empt.cedula"></p>
+<p>Foto: <input type="text" [(ngModel)]="m_empt.foto"></p>
+<!--
+  Con el atributo [m]="m_empt",
+  m hace referencia al objeto de la
+  clase del hijo mientras
+  que el m_empt hace referencia a
+  el objeto de la clase del padre.
+-->
+<app-medicos-hijo [m]="m_empt"></app-medicos-hijo>
