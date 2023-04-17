@@ -1,0 +1,7 @@
+<h1>Paciente (padre)</h1>
+<app-paciente-hijo (newItemEvent)="addPaciente($event)"></app-paciente-hijo>
+<ul>
+  <li *ngFor="let paciente of listaPacientes">
+    {{paciente.nombre}}
+  </li>
+</ul>
