@@ -13,11 +13,13 @@ export class UnionComponent {
   diaCumple:number=1;
   yearCumple:number=1990;
   mes: meses= meses.junio;
+  meses = Object.values(meses); //Para asignar un tipo de variable a un arraylist
   //Constructor
   constructor(){
     this.mostrar();
     console.log(this.ejemploNumber);
     console.log(this.ejemploString);
+    console.log(meses[0]);
   }
 
   //Metodos
