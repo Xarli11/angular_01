@@ -7,20 +7,7 @@
 <p>
   Dia: <input type="number" [(ngModel)]="diaCumple">
   Mes: <select [(ngModel)]="mes">
-    <option value="Enero">Enero</option>
-    <option value="Febrero">Febrero</option>
-    <option value="Marzo">Marzo</option>
-    <option value="Abril">Abril</option>
-    <option value="Mayo">Mayo</option>
-    <option value="Junio">Junio</option>
-    <option value="Julio">Julio</option>
-    <option value="Agosto">Agosto</option>
-    <option value="Septiembre">Septiembre</option>
-    <option value="Octubre">Octubre</option>
-    <option value="Noviembre">Noviembre</option>
-    <option value="Diciembre">Diciembre</option>
-    <!--ngFor -->
-
+    <option *ngFor="let mes of meses" [ngValue]="meses">{{mes}}</option>
   </select>
   Año: <input type="number" [(ngModel)]="yearCumple">
   <button (click)="mostrarCumple()">Mostrar</button><br><br>
