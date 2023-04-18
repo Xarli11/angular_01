@@ -1,3 +1,4 @@
+// Padre
 import { Component } from '@angular/core';
 import { Pedido } from '../_modelo/pedido';
 
@@ -13,7 +14,7 @@ export class PedidosListComponent {
     this.lp = []
   }
 
-  agregarPedido(listaPedidos: Pedido[]){
+  addPedido(listaPedidos: Pedido[]){
     this.lp = listaPedidos;
   }
 }

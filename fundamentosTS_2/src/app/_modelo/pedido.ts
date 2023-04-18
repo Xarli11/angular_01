@@ -3,22 +3,22 @@ export class Pedido{
     private _idCliente: number;
     private _nombreCliente: string;
     private _total: number;
-    private _importe: number;
+    private _precio: number;
 
-    constructor(idPedido: number, idCliente: number, nombreCliente: string, total: number, importe: number){
+    constructor(idPedido: number, idCliente: number, nombreCliente: string, total: number, precio: number){
         this._idPedido = idPedido;
         this._idCliente = idCliente;
         this._nombreCliente = nombreCliente;
         this._total = total;
-        this._importe = importe;
+        this._precio = precio;
     }
 
-    public get importe(): number {
-        return this._importe;
+    public get precio(): number {
+        return this._precio;
     }
 
-    public set importe(value: number) {
-        this._importe = value;
+    public set precio(value: number) {
+        this._precio = value;
     }
 
     public get total(): number {
@@ -28,7 +28,7 @@ export class Pedido{
     public set total(value: number) {
         this._total = value;
     }
-    
+
     public get nombreCliente(): string {
         return this._nombreCliente;
     }

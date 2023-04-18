@@ -1,6 +1,7 @@
+// Padre
 import { Component } from '@angular/core';
 import { Producto } from '../_modelo/producto';
-import { Tipos } from '../_modelo/tipos';
+import { Types } from '../_modelo/types';
 
 @Component({
   selector: 'app-productos-form',
@@ -13,7 +14,7 @@ export class ProductosFormComponent {
   nombre: string;
   existencias: number;
   precio: number;
-  tipo: Tipos;
+  tipo: Types;
   tipos: string[];
 
   constructor(){
@@ -22,8 +23,8 @@ export class ProductosFormComponent {
     this.nombre = "";
     this.existencias = 0;
     this.precio = 0;
-    this.tipo = Tipos.alimento;
-    this.tipos = Object.values(Tipos);
+    this.tipo = Types.alimento;
+    this.tipos = Object.values(Types);
   }
 
   ngOnInit(){

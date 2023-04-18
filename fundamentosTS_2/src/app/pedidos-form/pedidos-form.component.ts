@@ -1,3 +1,4 @@
+// Hijo
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Pedido } from '../_modelo/pedido';
 
@@ -13,7 +14,7 @@ export class PedidosFormComponent {
   idCliente: number;
   nombre: string;
   total: number;
-  importe: number;
+  precio: number;
 
   constructor(){
     this.newItemEvent = new EventEmitter<Pedido[]>();
@@ -22,11 +23,11 @@ export class PedidosFormComponent {
     this.idCliente = 0;
     this.nombre = "";
     this.total = 0;
-    this.importe = 0;
+    this.precio = 0;
   }
 
   enviarPedido(){
-    this.lh.push(new Pedido(this.idPedido, this.idCliente, this.nombre, this.total, this.importe));
+    this.lh.push(new Pedido(this.idPedido, this.idCliente, this.nombre, this.total, this.precio));
     this.idPedido++;
     this.newItemEvent.emit(this.lh);
   }
