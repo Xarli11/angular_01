@@ -15,8 +15,6 @@ export class FormularioBicicletaComponent {
   ngOnInit() {
   }
   mostrar() {
-
     this.cad = this.bicicleta.toString();
-
   }
 }

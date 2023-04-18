@@ -26,7 +26,7 @@ export class PedidosFormComponent {
     this.precio = 0;
   }
 
-  enviarPedido(){
+  sendPedido(){
     this.lh.push(new Pedido(this.idPedido, this.idCliente, this.nombre, this.total, this.precio));
     this.idPedido++;
     this.newItemEvent.emit(this.lh);
