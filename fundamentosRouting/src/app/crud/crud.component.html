@@ -1,0 +1,27 @@
+<h1>Formulario</h1>
+<div class="input-group mb-3">
+  <p><label>ID Factura:</label> <input type="text" [(ngModel)]="idFactura" class="form-control"></p>
+  <p><label>ID Cliente:</label> <input type="text" [(ngModel)]="idCliente" class="form-control"></p>
+  <p><label>Total Factura:</label> <input type="number" [(ngModel)]="TotalFactura" class="form-control"></p>
+  <p><label>IVA:</label> <input type="number" [(ngModel)]="Iva" class="form-control"></p>
+</div>
+<div class="input-group mb-3">
+  <p><button (click)="addFactura()" class="btn btn-primary">Añadir factura</button></p>
+  <p><button (click)="deleteFactura()" class="btn btn-success">Eliminar factura</button></p>
+  <p><button (click)="updateFactura()" class="btn btn-secondary">Modificar Factura</button></p>
+</div>
+
+<table border="2" class="table">
+  <tr>
+    <th scope="col">ID Factura</th>
+    <th scope="col">ID Cliente</th>
+    <th scope="col">Total Factura</th>
+    <th scope="col">IVA</th>
+  </tr>
+  <tr *ngFor="let f of devolverListaFacturas()">
+    <td scope="row">{{f.idFactura}}</td>
+    <td>{{f.idCliente}}</td>
+    <td>{{f.TotalFactura}}</td>
+    <td>{{f.Iva}}</td>
+  </tr>
+</table>
