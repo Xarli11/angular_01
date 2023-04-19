@@ -7,13 +7,13 @@ import { Producto } from '../_modelo/producto';
   styleUrls: ['./productos-list.component.css']
 })
 export class ProductosListComponent {
-  @Input() lh: Producto[];
+  @Input() listHijo: Producto[];
 
   ngOnInit(){
 
   }
-  
+
   constructor(){
-    this.lh = [];
+    this.listHijo = [];
   }
 }

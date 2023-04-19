@@ -1,14 +1,19 @@
 <h1>Formulario</h1>
-<div class="input-group mb-3">
-  <p><label>ID Factura:</label> <input type="text" [(ngModel)]="idFactura" class="form-control"></p>
-  <p><label>ID Cliente:</label> <input type="text" [(ngModel)]="idCliente" class="form-control"></p>
-  <p><label>Total Factura:</label> <input type="number" [(ngModel)]="TotalFactura" class="form-control"></p>
-  <p><label>IVA:</label> <input type="number" [(ngModel)]="Iva" class="form-control"></p>
+<div class="container">
+  <div class="row">
+  <div class="col"><label>ID Factura</label> <input type="text" [(ngModel)]="idFactura"></div>
+  <div class="col"><label>ID Cliente</label> <input type="text" [(ngModel)]="idCliente" ></div>
+  <div class="col"><label>Total Factura</label> <input type="number" [(ngModel)]="TotalFactura"></div>
+  <div class="col"><label>IVA</label> <input type="number" [(ngModel)]="Iva"></div>
 </div>
-<div class="input-group mb-3">
-  <p><button (click)="addFactura()" class="btn btn-primary">Añadir factura</button></p>
-  <p><button (click)="deleteFactura()" class="btn btn-success">Eliminar factura</button></p>
-  <p><button (click)="updateFactura()" class="btn btn-secondary">Modificar Factura</button></p>
+</div>
+<div class="container text-center">
+  <div class="row">
+      <button (click)="addFactura()" class="btn btn-primary col">Añadir factura</button>
+      <button (click)="deleteFactura()" class="btn btn-success col">Eliminar factura</button>
+      <button (click)="updateFactura()" class="btn btn-secondary col">Modificar Factura</button>
+  </div><br>
+
 </div>
 
 <table border="2" class="table">
