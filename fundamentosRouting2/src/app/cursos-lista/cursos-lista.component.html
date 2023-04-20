@@ -1,0 +1,9 @@
+<h2>Lista de cursos</h2>
+
+<ul>
+  <li *ngFor="let curso of cursoService.cursos">
+    {{ curso.nombre }} - {{ curso.duracion }} horas - {{ curso.nivel }}
+    <button [routerLink]="['/cursos',curso.id]">Modificar</button>
+  </li>
+</ul>
+
