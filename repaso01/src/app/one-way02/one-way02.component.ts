@@ -22,5 +22,4 @@ export class OneWay02Component {
       this.changed = false;
     }
   }
-
 }

@@ -10,6 +10,11 @@ import { Evento03Component } from './evento03/evento03.component';
 import { Twoway04Component } from './twoway04/twoway04.component';
 import { Servicio05Component } from './servicio05/servicio05.component';
 import { Directivas06Component } from './directivas06/directivas06.component';
+import { HijoPadreHComponent } from './hijo-padre-h/hijo-padre-h.component';
+import { HijoPadrePComponent } from './hijo-padre-p/hijo-padre-p.component';
+import { PadreHijoHComponent } from './padre-hijo-h/padre-hijo-h.component';
+import { PadreHijoPComponent } from './padre-hijo-p/padre-hijo-p.component';
+
 
 
 
@@ -21,7 +26,12 @@ import { Directivas06Component } from './directivas06/directivas06.component';
     Evento03Component,
     Twoway04Component,
     Servicio05Component,
-    Directivas06Component
+    Directivas06Component,
+    HijoPadreHComponent,
+    HijoPadrePComponent,
+    PadreHijoHComponent,
+    PadreHijoPComponent,
+
 
 
   ],

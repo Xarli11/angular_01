@@ -6,6 +6,8 @@ import { Evento03Component } from './evento03/evento03.component';
 import { Twoway04Component } from './twoway04/twoway04.component';
 import { Servicio05Component } from './servicio05/servicio05.component';
 import { Directivas06Component } from './directivas06/directivas06.component';
+import { PadreHijoPComponent } from './padre-hijo-p/padre-hijo-p.component';
+import { HijoPadrePComponent } from './hijo-padre-p/hijo-padre-p.component';
 
 const routes: Routes = [
   { path: 'interpolacion01', component: Interpolacion01Component },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'twoway04', component: Twoway04Component },
   { path: 'servicio05', component: Servicio05Component },
   { path: 'directivas06', component: Directivas06Component },
+  { path: 'padre-hijo-p', component: PadreHijoPComponent },
+  { path: 'hijo-padre-p', component: HijoPadrePComponent },
 
 ];
 
