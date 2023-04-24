@@ -5,3 +5,7 @@ a{
   margin-bottom: 20px;
 
 }
+router-outlet{
+  margin-top: 20px;
+}
+
