@@ -7,8 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class HijoPadreHComponent {
   @Input() n_hijo:string="";
-  nombre_hijo:string;
-  constructor() {
-    this.nombre_hijo = '';
-  }
 }

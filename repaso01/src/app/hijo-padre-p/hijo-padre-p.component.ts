@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hijo-padre-p.component.css']
 })
 export class HijoPadrePComponent {
-  nombre:string;
-
-  constructor() {
-    this.nombre = '';
-  }
+  nombre:string="";
 }

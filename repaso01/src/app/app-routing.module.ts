@@ -18,7 +18,6 @@ const routes: Routes = [
   { path: 'directivas06', component: Directivas06Component },
   { path: 'padre-hijo-p', component: PadreHijoPComponent },
   { path: 'hijo-padre-p', component: HijoPadrePComponent },
-
 ];
 
 @NgModule({
