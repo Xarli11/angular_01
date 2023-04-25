@@ -1,0 +1,12 @@
+<h2>Cursos</h2>
+
+Nombre: <input type="text" [(ngModel)]="curso.nombre">
+Duración: <input type="text" [(ngModel)]="curso.duracion">
+<select [(ngModel)]="curso.nivel">
+  <option *ngFor="let n of niveles" [value]="n">{{n}}</option>
+</select>
+ID: <label *ngIf="curso.id==0">Nuevo</label>
+    <label *ngIf="curso.id!=0">{{curso.id}}</label>
+<button (click)="modifAltaCurso()">Modificar</button>
+<button [routerLink]="['/']">Cancelar</button>
+
