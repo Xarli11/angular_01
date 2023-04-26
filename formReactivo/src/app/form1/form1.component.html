@@ -1,4 +1,4 @@
-<form [formGroup]="form" #form1="ngForm" (ngSubmit)="mostrarDatos()">
+<form [formGroup]="form" #form1="ngForm" (ngSubmit)="addModAlumno()">
   ID: &nbsp;<input formControlName="id" type="number" required>
   <br>
   Nombre: &nbsp;<input formControlName="nombre" type="text" required>
@@ -9,4 +9,5 @@
   <br>
   <button type="submit" [disabled]="form1.invalid">Enviar</button>
   <button type="button" routerLink="">Cancelar</button>
+  <button type="button" routerLink="/alta">Listado</button>
 </form>

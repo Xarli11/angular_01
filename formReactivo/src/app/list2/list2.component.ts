@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlumnosService } from '../alumnos.service';
 import { Alumno } from '../_modelo/alumno';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list2',
@@ -10,7 +11,7 @@ import { Alumno } from '../_modelo/alumno';
 export class List2Component {
   alumnos: Alumno[] = [];
 
-  constructor(private alumnosService: AlumnosService) {
+  constructor(private alumnosService: AlumnosService, private route: ActivatedRoute, private router: Router ) {
     this.mostrarAlumnos();
     this.alumnos=alumnosService.alumnos;
    }

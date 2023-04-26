@@ -1,6 +1,9 @@
+<router-outlet></router-outlet>
 <label *ngFor="let alumno of alumnos"><br>
 {{alumno.id}} &nbsp;
 {{alumno.nombre}} &nbsp;
 {{alumno.apellidos}} &nbsp;
 {{alumno.horas_formacion}} &nbsp;
-</label>
+<a [routerLink]="['/formulario', alumno.id]">Modificar</a>
+</label><br>
+<button type="button" routerLink="/alta">Alta</button>

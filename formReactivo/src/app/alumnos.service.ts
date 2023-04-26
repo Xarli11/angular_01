@@ -16,7 +16,20 @@ export class AlumnosService {
     return of(this.alumnos);
   }
   buscarAlumno(id: number): Observable<Alumno> {
-    const alumnoEncontrado = this.alumnos.find(alumno => alumno.id === id); // Buscamos el alumno por su id
-  return alumnoEncontrado==undefined?of({id: 0, nombre: '', apellidos: '', horas_formacion: 0}):of(alumnoEncontrado);
+    let alumnoEncontrado = this.alumnos.find(alumno => alumno.id == id); // Buscamos el alumno por su id
+    return alumnoEncontrado==undefined? of({id: 0, nombre: '', apellidos: '', horas_formacion: 0}):of(alumnoEncontrado);
+  }
+  addAlumno(alumno: Alumno) {
+    alumno.id=this.alumnos[this.alumnos.length-1].id+1;
+    this.alumnos.push(alumno);
+  }
+  modificarAlumno(alumno: Alumno) {
+    let alumnoEncontrado = this.alumnos.find(alumno2 => alumno2.id == alumno.id); // Buscamos el alumno por su id
+    if(alumnoEncontrado){
+      alumnoEncontrado.nombre=alumno.nombre;
+      alumnoEncontrado.apellidos=alumno.apellidos;
+      alumnoEncontrado.horas_formacion=alumno.horas_formacion;
+      alumnoEncontrado.mayor_de_edad=alumno.mayor_de_edad;
+    }
   }
 }
