@@ -5,9 +5,9 @@ import { DetallespedidoComponent } from './detallespedido/detallespedido.compone
 
 
 const routes: Routes = [
-  { path: '', component: PedidosComponent, children: [
-    { path: 'detalles/:id', component: DetallespedidoComponent },
-  ] },
+  { path: '', component: PedidosComponent, children:
+  [{ path: 'detalles/:id', component: DetallespedidoComponent }]
+}
 ];
 
 @NgModule({

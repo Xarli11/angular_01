@@ -1,38 +1,55 @@
-import { Detalle } from "./detalle";
-
 export class Pedido{
-    private _id_pedido: number;
-    private _id_cliente:number;
-    private _forma_pago:string;
-    private _direccion:string;
-    constructor(id_pedido:number,id_cliente:number,forma_pago:string,direccion:string){
-        this._id_pedido=id_pedido;
-        this._id_cliente=id_cliente;
-        this._forma_pago=forma_pago;
-        this._direccion=direccion;
+    private _idPedido: number;
+    private _idCliente: number;
+    private _nombreCliente: string;
+    private _formaPago: string;
+    private _direccionEntrega: string;
+
+    constructor(idPedido: number, idCliente: number, nombreCliente: string, formaPago: string, direccionEntrega: string){
+        this._idPedido = idPedido;
+        this._idCliente = idCliente;
+        this._nombreCliente = nombreCliente;
+        this._formaPago = formaPago;
+        this._direccionEntrega = direccionEntrega;
     }
-    public get id_pedido(): number {
-      return this._id_pedido;
+
+    public get idPedido(): number {
+        return this._idPedido;
     }
-    public set id_pedido(value: number) {
-      this._id_pedido = value;
+
+    public set idPedido(value: number) {
+        this._idPedido = value;
     }
-    public get id_cliente(): number {
-      return this._id_cliente;
+
+    public get idCliente(): number {
+        return this._idCliente;
     }
-    public set id_cliente(value: number) {
-      this._id_cliente = value;
+
+    public set idCliente(value: number) {
+        this._idCliente = value;
     }
-    public get forma_pago(): string {
-      return this._forma_pago;
+
+    public get nombreCliente(): string {
+        return this._nombreCliente;
     }
-    public set forma_pago(value: string) {
-      this._forma_pago = value;
+
+    public set nombreCliente(value: string) {
+        this._nombreCliente = value;
     }
-    public get direccion(): string {
-      return this._direccion;
+
+    public get formaPago(): string {
+        return this._formaPago;
     }
-    public set direccion(value: string) {
-      this._direccion = value;
+
+    public set formaPago(value: string) {
+        this._formaPago = value;
+    }
+
+    public get direccionEntrega(): string {
+        return this._direccionEntrega;
+    }
+
+    public set direccionEntrega(value: string) {
+        this._direccionEntrega = value;
     }
 }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {Pedido} from '../_modelo/pedido'
-import {PedidosService} from '../pedidos.service'
-import {FormGroup, FormControl} from '@angular/forms'
+import { Pedido } from '../_modelo/pedido';
+import { FormGroup, FormControl } from '@angular/forms';
+import { PedidosService } from '../pedidos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pedidos',
@@ -9,23 +10,43 @@ import {FormGroup, FormControl} from '@angular/forms'
   styleUrls: ['./pedidos.component.css']
 })
 export class PedidosComponent {
-  form: FormGroup;
-  pedido:Pedido=new Pedido(0,0,'','');
-  listaPedidos:Pedido[]=[];
-  constructor(private pedidosservice:PedidosService) {
-    this.form = new FormGroup({
-      id_pedido: new FormControl(''),
-      id_cliente: new FormControl(''),
-      forma_pago: new FormControl(''),
-      direccion: new FormControl(''),
-    });
-    this.pedido.id_pedido=this.form.value.id_pedido;
-    this.pedido.id_cliente=this.form.value.id_cliente;
-    this.pedido.forma_pago=this.form.value.forma_pago;
-    this.pedido.direccion=this.form.value.direccion;
+  formPedido: FormGroup;
+
+  constructor(private router: Router, public pedidosService: PedidosService){
+    this.formPedido = new FormGroup({
+      idPedido: new FormControl(this.pedidosService.generateId()),
+      idCliente: new FormControl(''),
+      nombreCliente: new FormControl(''),
+      formaPago: new FormControl(''),
+      direccionEntrega: new FormControl('')
+    })
+  }
+
+  goToDetalles(){
+    Object.keys(this.formPedido.controls).forEach( key => this.formPedido.get(key)?.disable())
+    this.router.navigate(['/detalles', this.formPedido.value.idPedido]);
   }
 
   addPedido(){
-    this.pedidosservice.addPedido(this.pedido);
+    this.pedidosService.addPedido(
+    new Pedido(
+        this.formPedido.value.idPedido,
+        this.formPedido.value.idCliente,
+        this.formPedido.value.nombreCliente,
+        this.formPedido.value.formaPago,
+        this.formPedido.value.direccionEntrega
+      ));
+    this.pedidosService.addDetalle();
+    this.resetForm();
+    Object.keys(this.formPedido.controls).forEach(key => this.formPedido.get(key)?.enable())
+    this.router.navigate(['']);
+  }
+
+  resetForm(){
+    this.formPedido.get('idPedido')?.setValue(this.pedidosService.generateId());
+    this.formPedido.get('idCliente')?.setValue('');
+    this.formPedido.get('nombreCliente')?.setValue('');
+    this.formPedido.get('formaPago')?.setValue('');
+    this.formPedido.get('direccionEntrega')?.setValue('');
   }
 }
