@@ -6,9 +6,11 @@ import {Pedido} from './_modelo/pedido'
   providedIn: 'root'
 })
 export class PedidosService {
-  pedido:Pedido=new Pedido(0,0,'','',[]);
+  pedido:Pedido=new Pedido(0,0,'','');
   listaPedidos:Pedido[]=[];
   constructor() { }
-
+  addPedido(pedido:Pedido){
+    this.listaPedidos.push(pedido);
+  }
 }
 

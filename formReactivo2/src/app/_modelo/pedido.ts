@@ -5,13 +5,11 @@ export class Pedido{
     private _id_cliente:number;
     private _forma_pago:string;
     private _direccion:string;
-    private _listaDetalles:Detalle[];
-    constructor(id_pedido:number,id_cliente:number,forma_pago:string,direccion:string,listaDetalles:Detalle[]){
+    constructor(id_pedido:number,id_cliente:number,forma_pago:string,direccion:string){
         this._id_pedido=id_pedido;
         this._id_cliente=id_cliente;
         this._forma_pago=forma_pago;
         this._direccion=direccion;
-        this._listaDetalles=listaDetalles;
     }
     public get id_pedido(): number {
       return this._id_pedido;
@@ -36,11 +34,5 @@ export class Pedido{
     }
     public set direccion(value: string) {
       this._direccion = value;
-    }
-    public get listaDetalles(): Detalle[] {
-      return this._listaDetalles;
-    }
-    public set listaDetalles(value: Detalle[]) {
-      this._listaDetalles = value;
     }
 }

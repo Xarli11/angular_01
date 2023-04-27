@@ -1,0 +1,19 @@
+<form #reactForm="ngForm" [formGroup]="form" (ngSubmit)="addPedido()">
+<h1>Pedido</h1>
+<table>
+  <tr>
+    <th>Pedido ID</th>
+    <th>Cliente ID</th>
+    <th>Forma de pago</th>
+    <th>Direccion entega</th>
+  </tr>
+  <tr>
+    <td><input type="number"formControlName="id_pedido"></td>
+    <td><input type="number"formControlName="id_cliente"></td>
+    <td><input type="text"formControlName="forma_pago"></td>
+    <td><input type="text"formControlName="direccion"></td>
+  </tr>
+</table>
+<button type="button" [disabled]="reactForm.invalid" [routerLink]="['/detalles', pedido.id_cliente]">Agregar detalles</button>
+
+<router-outlet></router-outlet>
