@@ -1,0 +1,30 @@
+<!-- https://material.angular.io/components/categories -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <label>Carlos Garcia Tovar</label>
+    <span class="spacer"></span>
+    <button mat-icon-button class="icon" (click)="SideNav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button type="button" mat-icon-button><mat-icon>more_vert</mat-icon></button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #SideNav mode="push" opened="false">
+    <!-- <mat-list>
+      <div class="element">
+        <a mat-list-item (click)="SideNav.toggle()" *ngFor="let item of menuService.menuList"
+        routerLink="{{item.ruta}}"><img class="icon_list" src="../assets/img/{{item.icono}}">{{item.nombre}}</a>
+      </div>
+     <a mat-list-item (click)="SideNav.toggle()">Cerrar</a>
+    </mat-list> -->
+    <mat-nav-list>
+      <mat-list-item *ngFor="let menu of menuService.menuList" [routerLink]="menu.ruta" >
+          <mat-icon class="white-icon" matListItemIcon color="black">{{menu.icono}}</mat-icon>
+          <a matListItemTitle>
+              {{ menu.nombre }}</a>
+      </mat-list-item>
+  </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
