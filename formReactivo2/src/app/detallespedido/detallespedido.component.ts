@@ -10,27 +10,27 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./detallespedido.component.css']
 })
 export class DetallespedidoComponent {
-  formDetalle: FormGroup;
+  form: FormGroup;
 
   constructor(private router: Router, private route: ActivatedRoute, public pedidosService: PedidosService){
-    this.formDetalle = new FormGroup({
+    this.form = new FormGroup({
       id_producto: new FormControl(''),
       cantidad: new FormControl('')
     })
   }
 
-  addDetalle(){
+  addDetalle(){ //agrega un detalle al carrito
     this.pedidosService.addCarrito(
     new Detalle(
         this.route.snapshot.params['id'],
-        this.formDetalle.value.idProducto,
-        this.formDetalle.value.cantidad
+        this.form.value.idProducto,
+        this.form.value.cantidad
       ));
-    this.resetForm();
+    this.reset();
   }
 
-  resetForm(){
-    this.formDetalle.get('id_producto')?.setValue('');
-    this.formDetalle.get('cantidad')?.setValue('');
+  reset(){ //limpia los campos
+    this.form.get('id_producto')?.setValue('');
+    this.form.get('cantidad')?.setValue('');
   }
 }

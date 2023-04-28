@@ -40,8 +40,6 @@ export class CursoListaComponent {
         alert('No se ha encontrado el curso con ID ' + id);
       }
   }
-  altaCurso(){
 
-  }
 
 }

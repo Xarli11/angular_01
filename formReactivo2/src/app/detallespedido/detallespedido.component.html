@@ -1,4 +1,4 @@
-<form #reactForm="ngForm" [formGroup]="formDetalle" (ngSubmit)="addDetalle()">
+<form #reactForm="ngForm" [formGroup]="form" (ngSubmit)="addDetalle()">
   <h2>Agregue su producto:</h2>
   <p>ID producto: <input type="number" formControlName="id_producto" required></p>
   <p>Cantidad: <input type="number" formControlName="cantidad" required></p>
