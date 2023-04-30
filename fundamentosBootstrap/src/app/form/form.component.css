@@ -1,0 +1,31 @@
+#card1{
+  margin-top: 30px;
+  margin-left:30%;
+}
+#card2 {
+  margin-top: 30px;
+  margin-left: -30%;
+  height: 330px;
+}
+.boton-enviar {
+  margin-top: 40%;
+  margin-left: 40%;
+
+}
+.container-row{
+  margin-bottom: 5%;
+}
+.form-control {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.card_text-center_2{
+  margin-left: -50%;
+  margin-top: 10%;
+}
+/* ----------- */
+#tecnicas{
+  align-items: center;
+  text-align: center;
+}
