@@ -1,12 +1,12 @@
 export class Pedido{
-    private _idPedido: number;
+    private _id_pedido: number;
     private _idCliente: number;
     private _nombreCliente: string;
     private _total: number;
     private _precio: number;
 
-    constructor(idPedido: number, idCliente: number, nombreCliente: string, total: number, precio: number){
-        this._idPedido = idPedido;
+    constructor(id_pedido: number, idCliente: number, nombreCliente: string, total: number, precio: number){
+        this._id_pedido = id_pedido;
         this._idCliente = idCliente;
         this._nombreCliente = nombreCliente;
         this._total = total;
@@ -45,11 +45,11 @@ export class Pedido{
         this._idCliente = value;
     }
 
-    public get idPedido(): number {
-        return this._idPedido;
+    public get id_pedido(): number {
+        return this._id_pedido;
     }
 
-    public set idPedido(value: number) {
-        this._idPedido = value;
+    public set id_pedido(value: number) {
+        this._id_pedido = value;
     }
 }

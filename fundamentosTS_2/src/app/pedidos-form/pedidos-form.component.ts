@@ -10,7 +10,7 @@ import { Pedido } from '../_modelo/pedido';
 export class PedidosFormComponent {
   @Output() newItemEvent;
   listHijo: Pedido[]; // Lista de pedidos
-  idPedido: number; // Id del pedido
+  id_pedido: number; // Id del pedido
   idCliente: number; // Id del cliente
   nombre: string;  // Nombre del cliente
   total: number; // Total del pedido
@@ -19,7 +19,7 @@ export class PedidosFormComponent {
   constructor(){
     this.newItemEvent = new EventEmitter<Pedido[]>();
     this.listHijo = []
-    this.idPedido = 1;
+    this.id_pedido = 1;
     this.idCliente = 0;
     this.nombre = "";
     this.total = 0;
@@ -27,8 +27,8 @@ export class PedidosFormComponent {
   }
 
   sendPedido(){
-    this.listHijo.push(new Pedido(this.idPedido, this.idCliente, this.nombre, this.total, this.precio));
-    this.idPedido++;
+    this.listHijo.push(new Pedido(this.id_pedido, this.idCliente, this.nombre, this.total, this.precio));
+    this.id_pedido++;
     this.newItemEvent.emit(this.listHijo);
   }
 
